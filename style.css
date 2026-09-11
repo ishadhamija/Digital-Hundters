@@ -1,0 +1,284 @@
+:root {
+  --bg-clr: #000810;
+  --neon-teal: #10b8a0;
+  --txt: #a7b0b2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000810;
+}
+
+nav {
+  align-items: center;
+  padding: 2% 5%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.section1 {
+  background-image: url(digital_bg.png);
+}
+nav > img {
+  height: 100px;
+  width: auto;
+}
+
+nav > h6 {
+  font-size: 90%;
+}
+
+nav .tags {
+  justify-content: center;
+  gap: 2vw;
+  margin: auto;
+  white-space: nowrap;
+}
+
+nav .tags a {
+  position: relative;
+}
+
+nav .tags a:hover {
+  color: #10b8a0;
+  transition: 0.3s;
+}
+
+nav .tags a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: var(--neon-teal);
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  transition: 0.3s ease;
+}
+
+nav .tags a:hover::after {
+  width: 100%;
+}
+
+nav > button {
+  border: 2px solid var(--neon-teal);
+  border-radius: 20px;
+  height: 40px;
+  width: 11%;
+  transition: all 0.3 ease;
+}
+
+nav > button:hover {
+  background-color: black;
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow:
+    0 0 10px var(--neon-teal),
+    0 0 15px var(--neon-teal),
+    0 0 25px var(--neon-teal);
+}
+
+.hero_div {
+  height: calc(100vh - 13vh);
+  padding: 2% 5%;
+  position: relative;
+}
+
+.hero_div .left_div {
+  overflow: hidden;
+  width: 45%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero_div .left_div h6:nth-child(1) {
+  font-size: 23px;
+  font-weight: 500;
+  font-family: "Orbitron", sans-serif;
+}
+
+.left_div h1 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: "Orbitron", sans-serif;
+}
+
+.left_div h6 {
+  font-size: 27px;
+  margin-top: 13px;
+  font-weight: 700;
+}
+
+.left_div p {
+  font-size: 15px;
+  margin-top: 13px;
+}
+
+.hero_div .left_div button:first-of-type {
+  border: 2px solid var(--neon-teal);
+  height: 50px;
+  width: 221px;
+  margin-top: 21px;
+  border-radius: 9px;
+  padding: 5px;
+  background: linear-gradient(to right, transparent, #10b8a0);
+}
+
+.hero_div .left_div button:first-of-type:hover {
+  background: black;
+  transform: translateX(13px) scale(1.05);
+  transition: 0.3s;
+  box-shadow:
+    0 0 10px var(--neon-teal),
+    0 0 15px var(--neon-teal),
+    0 0 25px var(--neon-teal);
+}
+
+.hero_div .left_div button:first-of-type i {
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+.hero_div .left_div button:last-of-type {
+  height: 50px;
+  width: 221px;
+  margin-top: 17px;
+  margin-left: 7px;
+}
+
+.hero_div .left_div button:last-of-type:hover {
+  transform: translateX(13px) scale(1.05);
+  transition: 0.3s;
+  margin-left: 10px;
+  box-shadow:
+    0 0 10px var(--neon-teal),
+    0 0 15px var(--neon-teal),
+    0 0 25px var(--neon-teal);
+  border-radius: 9px;
+  padding: 5px;
+}
+
+.hero_div .left_div button:last-of-type i {
+  display: inline-block;
+  border: 1px solid #10b8a0;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-top: 0;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+.hero_div .left_div button:last-of-type:hover i {
+  height: 30px;
+  width: 30px;
+  padding: 3px;
+}
+
+/* now comes center div */
+.hero_div .center_div > img {
+  height: 95%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-43%);
+  z-index: 1;
+  top: 0;
+  opacity: 0.7;
+}
+
+/* now comes right div */
+.hero_div .right_div {
+  position: absolute;
+  z-index: 2;
+  right: 5%;
+  overflow: hidden;
+  top: 17%;
+}
+
+.section2 {
+  background-color: transparent;
+}
+
+.section2 .transparent_container {
+  margin: 2% 5%;
+  background: rgba(58, 81, 90, 0.35);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(150, 180, 185, 0.2);
+  border-radius: 20px;
+  height: 150px;
+  margin-top: -30px;
+  position: relative;
+}
+
+.transparent_container .left_star>img{
+  position: absolute;
+  height: 181px;
+  top: -30px;
+  left: 30px;
+  width: auto;
+}
+.transparent_container .right_star>img{
+  position: absolute;
+  height: 190px;
+  width: auto;
+  bottom: 20px;
+  right: 5px;
+}
+
+.section2 .projects{
+  margin: 2% 5%;
+}
+
+.section2 .big_div{
+  margin: 2% 9%;
+
+}
+.section2 .work{
+  margin: 2% 9%;
+
+}
+
+footer{
+  margin: 2% 8%;
+  background: url(footer_img.webp);
+
+}
+
+footer .div1>button{
+  border: 2px solid var(--neon-teal);
+  height: 50px;
+  width: 221px;
+  margin-top: 27px;
+  border-radius: 9px;
+  padding: 5px;
+  background: linear-gradient(to right, transparent, #10b8a0);
+}
+
+footer .div1>button:hover {
+  background: black;
+  transform: translateX(13px) scale(1.05);
+  transition: 0.3s;
+  box-shadow:
+    0 0 10px var(--neon-teal),
+    0 0 15px var(--neon-teal),
+    0 0 25px var(--neon-teal);
+}
+
+footer .div1>button i {
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+.copyright{
+  margin: 2% 9%;
+
+}
